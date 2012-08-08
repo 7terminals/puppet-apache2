@@ -18,7 +18,7 @@ for i in `rpm -ql <%= webserver_packages.join ' '  %>`
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r -L $i $CHROOT_DIR
+		cp --parents -r -L -H $i $CHROOT_DIR
 	fi
 done 
 
@@ -31,7 +31,7 @@ for i in $( ldd -v $CHROOT_DIR/usr/sbin/httpd | grep "=>" | awk -F "=>" '{ print
 do 
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r -L $i* $CHROOT_DIR
+		cp --parents -r -L -H $i* $CHROOT_DIR
 	fi
 done
 
@@ -39,7 +39,7 @@ for i in $( ldd -v $CHROOT_DIR/usr/lib64/httpd/modules/* | grep "=>" | awk -F "=
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r -L $i* $CHROOT_DIR
+		cp --parents -r -L -H $i* $CHROOT_DIR
 	fi
 done
 
@@ -47,7 +47,7 @@ for i in $( ldd -v $CHROOT_DIR/usr/lib64/php/modules/* | grep "=>" | awk -F "=>"
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r -L $i* $CHROOT_DIR
+		cp --parents -r -L -H $i* $CHROOT_DIR
 	fi
 done
 
