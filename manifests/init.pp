@@ -16,12 +16,10 @@ class apache2 {
 		debian, ubuntu : {
 		}
 		centos, redhat, oel, linux, fedora : {
-			$webserver_packages = ['httpd', 'php', 'php-cli', 'php-common', 'php-devel',
-			'php-gd', 'php-imap', 'php-mbstring', 'php-mcrypt', 'php-mysql', 'php-odbc',
-			'php-pdo', 'php-pear', 'php-pecl-memcache', 'php-soap', 'php-xml',
-			'php-xmlrpc', 'php-pecl-apc', 'php-pecl-mailparse', 'glibc', 'pcre',
-			'expat', 'apr', 'openssl', 'mod_security', 'zlib-devel', 'openssl-devel',
-			'libtool', 'mod_geoip', 'GeoIP-devel', 'httpd-devel']
+			$webserver_packages = ['php-common', 'php-imap', 'php-mbstring',
+			'php-pecl-mailparse', 'php-pdo', 'unixODBC-libs', 'php-odbc', 'php-mysql',
+			'php-xmlrpc', 'httpd', 'php-xml', 'php-soap', 'php-mcrypt', 'php-pecl-apc',
+			'php-gd-5', 'GeoIP', 'glibc', 'mod_geoip']
 		}
 		default : {
 			$supported = false
