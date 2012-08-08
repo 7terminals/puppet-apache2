@@ -14,7 +14,7 @@ fi
 # Find all files required for running the webserver and php modules and move them into the chroot
 #
 
-for i in `rpm -ql <% webserver_packages.join ' '  %>`
+for i in `rpm -ql <%= webserver_packages.join ' '  %>`
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
@@ -31,7 +31,7 @@ for i in $( ldd -v $CHROOT_DIR/usr/sbin/httpd | grep "=>" | awk -F "=>" '{ print
 do 
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r  $i* $CHROOT_DIR
+		cp --parents -r -L $i* $CHROOT_DIR
 	fi
 done
 
@@ -39,7 +39,7 @@ for i in $( ldd -v $CHROOT_DIR/usr/lib64/httpd/modules/* | grep "=>" | awk -F "=
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r  $i* $CHROOT_DIR
+		cp --parents -r -L $i* $CHROOT_DIR
 	fi
 done
 
@@ -47,7 +47,7 @@ for i in $( ldd -v $CHROOT_DIR/usr/lib64/php/modules/* | grep "=>" | awk -F "=>"
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r  $i* $CHROOT_DIR
+		cp --parents -r -L $i* $CHROOT_DIR
 	fi
 done
 
@@ -101,16 +101,16 @@ then
 fi
 
 
-USR_EXISTS=`grep "in-code:x:2001:2001:Apache:/var/www:/sbin/nologin" $CHROOT_DIR/etc/passwd | wc -l`
+USR_EXISTS=`grep "apache:x:7007:7007:Apache:/var/www:/sbin/nologin" $CHROOT_DIR/etc/passwd | wc -l`
 if [ $USR_EXISTS -eq 0 ]
 then
-	echo "in-code:x:2001:2001:Apache:/var/www:/sbin/nologin" > $CHROOT_DIR/etc/passwd
+	echo "apache:x:7007:7007:Apache:/var/www:/sbin/nologin" > $CHROOT_DIR/etc/passwd
 fi
 
-GRP_EXISTS=`grep "in-code:x:2001:" $CHROOT_DIR/etc/group | wc -l`
+GRP_EXISTS=`grep "apache:x:7001:" $CHROOT_DIR/etc/group | wc -l`
 if [ $GRP_EXISTS -eq 0 ]
 then
-	echo "in-code:x:2001:" > $CHROOT_DIR/etc/group
+	echo "apache:x:7007:" > $CHROOT_DIR/etc/group
 fi
 
 if ! [ -d $CHROOT_DIR/dev ]
