@@ -2,7 +2,7 @@
 
 # Creates a chroot Apache + PHP server 
 
-CHROOT_DIR=/webserver
+CHROOT_DIR=<%= base_chroot_dir %>
 
 #Create CHROOT_DIR if doesn't exists
 if ! [ -d $CHROOT_DIR ] 
