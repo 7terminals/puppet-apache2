@@ -18,7 +18,7 @@ for i in `rpm -ql <%= webserver_packages.join ' '  %>`
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
-		cp --parents -r $i $CHROOT_DIR
+		cp --parents -r -L $i $CHROOT_DIR
 	fi
 done 
 
