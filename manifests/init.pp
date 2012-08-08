@@ -11,7 +11,8 @@
 # Sample Usage:
 #
 # [Remember: No empty lines between comments and class definition]
-class apache2 ($base_chroot_dir = '/webserver') {
+class apache2 ($base_chroot_dir = '/webserver',
+	$port = 80) {
 	case $::operatingsystem {
 		debian, ubuntu : {
 		}
@@ -53,7 +54,7 @@ class apache2 ($base_chroot_dir = '/webserver') {
 			require => Package[$webserver_packages],
 	}
 	file {
-		$init_script_name :
+		"/etc/init.d/$init_script_name" :
 			content => template("${module_name}/$init_script"),
 			owner => root,
 			group => root,
