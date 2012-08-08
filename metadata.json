@@ -1,0 +1,20 @@
+{
+  "name": "puppet-apache2",
+  "author": "Francis",
+  "description": "",
+  "license": "",
+  "project_page": "",
+  "source": "",
+  "summary": "",
+  "version": "",
+  "checksums": {
+    "Modulefile": "810be7e66a3b8d7e4d5b891baf9fa189",
+    "README": "311704eb9da7329602a4570d0654cf11",
+    "README.md": "c792e3db25a16b6f82a6cc17429290bb",
+    "manifests\\init.pp": "c74c9df2098ee953432f7a28701555ce",
+    "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "tests\\init.pp": "17471b19829471c5ae6f11efdcd698d1"
+  },
+  "dependencies": []
+}
