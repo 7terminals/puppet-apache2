@@ -77,7 +77,11 @@ class apache2 ($base_chroot_dir = '/webserver',
 			logoutput => true,
 			require => [File['/var/lib/puppet/cache/make_chroot_webserver.sh'],
 			File['/etc/httpd/conf/httpd.conf', '/etc/php.ini']],
-			notify => Service['httpd'],
+			notify => Service[$init_script_name],
 			refreshonly => true,
+	}
+	service {
+		$init_script_name :
+			ensure => running,
 	}
 } 
