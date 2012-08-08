@@ -1,3 +1,1 @@
-apache2::setup{
-	
-}
+include apache2
