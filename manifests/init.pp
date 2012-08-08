@@ -40,7 +40,7 @@ class apache2 {
 		'/var/lib/puppet/cache' :
 			ensure => directory,
 			owner => root,
-			group => root.
+			group => root,
 	}
 	file {
 		'/var/lib/puppet/cache/make_chroot_webserver.sh' :

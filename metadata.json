@@ -11,7 +11,7 @@
     "Modulefile": "810be7e66a3b8d7e4d5b891baf9fa189",
     "README": "311704eb9da7329602a4570d0654cf11",
     "README.md": "c792e3db25a16b6f82a6cc17429290bb",
-    "manifests\\init.pp": "82854412e2f5ed5bd5ea072750ce7683",
+    "manifests\\init.pp": "aebc8b1d6ef5b3ea3c0151c2bde587da",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "templates\\make_chroot_webserver.sh": "56baaba9ef7e51414ea9a4ff73685434",
