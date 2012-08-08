@@ -14,7 +14,7 @@ fi
 # Find all files required for running the webserver and php modules and move them into the chroot
 #
 
-for i in `rpm -ql <%= webserver_packages %>`
+for i in `rpm -ql <% webserver_packages.join ' '  %>`
 do
     if ! [ -e $CHROOT_DIR/$i ]
 	then
