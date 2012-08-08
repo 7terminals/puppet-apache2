@@ -16,7 +16,7 @@
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "templates\\make_chroot_webserver.sh": "9af979ea7767164bc3d799aa60712b93",
     "templates\\redhat-httpd.conf.erb": "4f5a7f8ef4395acecf4f5258bcaa7714",
-    "templates\\redhat-httpd.erb": "f82f3d4398fcbc95ad5f8b5f803c6384",
+    "templates\\redhat-httpd.erb": "f1d0e6fd9a1b9d17dfc961f9c4c23e91",
     "templates\\redhat-php.ini.erb": "09cf92af321360fc587be944379e227e",
     "tests\\init.pp": "17471b19829471c5ae6f11efdcd698d1"
   },
