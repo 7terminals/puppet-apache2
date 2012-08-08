@@ -14,6 +14,7 @@
     "manifests\\init.pp": "c74c9df2098ee953432f7a28701555ce",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
+    "templates\\make_chroot_webserver.sh": "56baaba9ef7e51414ea9a4ff73685434",
     "tests\\init.pp": "17471b19829471c5ae6f11efdcd698d1"
   },
   "dependencies": []
