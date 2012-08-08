@@ -59,6 +59,7 @@ class apache2 ($base_chroot_dir = '/webserver',
 			owner => root,
 			group => root,
 			require => Package[$webserver_packages],
+			mode => 755
 	}
 	file {
 		'/var/lib/puppet/cache' :
