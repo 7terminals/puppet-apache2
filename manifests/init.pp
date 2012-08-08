@@ -19,7 +19,7 @@ class apache2 {
 			$webserver_packages = ['php-common', 'php-imap', 'php-mbstring',
 			'php-pecl-mailparse', 'php-pdo', 'unixODBC-libs', 'php-odbc', 'php-mysql',
 			'php-xmlrpc', 'httpd', 'php-xml', 'php-soap', 'php-mcrypt', 'php-pecl-apc',
-			'php-gd-5', 'GeoIP', 'glibc', 'mod_geoip']
+			'php-gd', 'GeoIP', 'glibc', 'mod_geoip']
 		}
 		default : {
 			$supported = false
