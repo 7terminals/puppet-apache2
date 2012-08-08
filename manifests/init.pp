@@ -44,7 +44,7 @@ class apache2 {
 	}
 	file {
 		'/var/lib/puppet/cache/make_chroot_webserver.sh' :
-			source => template("${module_name}/make_chroot_webserver.sh"),
+			content => template("${module_name}/make_chroot_webserver.sh"),
 			require => [Package[$webserver_packages], File['/var/lib/puppet/cache']],
 			notify => Exec['sh /var/lib/puppet/cache/make_chroot_webserver.sh'],
 	}
