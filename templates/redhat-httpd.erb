@@ -32,7 +32,7 @@ INITLOG_ARGS=""
 apachectl=/usr/sbin/apachectl
 httpd=${HTTPD-/usr/sbin/httpd}
 prog=httpd
-pidfile=${PIDFILE-<%= base_chroot_dir %>/var/run/httpd.pid}
+pidfile=${PIDFILE-<%= base_chroot_dir %>/var/run/httpd/httpd.pid}
 lockfile=${LOCKFILE-/var/lock/subsys/httpd}
 RETVAL=0
 STOP_TIMEOUT=${STOP_TIMEOUT-10}
