@@ -81,6 +81,7 @@ class apache2 ($base_chroot_dir = '/webserver',
 			notify => Service[$init_script_name],
 			refreshonly => true,
 	}
+	/* At this point we have everything required to start the Apache in chroot jail */
 	service {
 		$init_script_name :
 			ensure => running,

@@ -11,11 +11,11 @@
     "Modulefile": "810be7e66a3b8d7e4d5b891baf9fa189",
     "README": "311704eb9da7329602a4570d0654cf11",
     "README.md": "c792e3db25a16b6f82a6cc17429290bb",
-    "manifests\\init.pp": "5f793c12f1e3c006ddda669e815d6203",
+    "manifests\\init.pp": "3cd53d7bdddf9508d842474f23d19cfe",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "templates\\make_chroot_webserver.sh": "9af979ea7767164bc3d799aa60712b93",
-    "templates\\redhat-httpd.conf.erb": "4f5a7f8ef4395acecf4f5258bcaa7714",
+    "templates\\redhat-httpd.conf.erb": "2c8fc855b3b6b68b987fe36d0b639c5d",
     "templates\\redhat-httpd.erb": "f1d0e6fd9a1b9d17dfc961f9c4c23e91",
     "templates\\redhat-php.ini.erb": "09cf92af321360fc587be944379e227e",
     "tests\\init.pp": "17471b19829471c5ae6f11efdcd698d1"
