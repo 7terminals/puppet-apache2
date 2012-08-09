@@ -18,9 +18,9 @@ class apache2 ($base_chroot_dir = '/webserver',
 		}
 		centos, redhat, oel, linux, fedora : {
 			$webserver_packages = ['php-common', 'php-imap', 'php-mbstring',
-			'php-pecl-mailparse', 'php-pdo', 'php-odbc', 'php-mysql',
-			'php-xmlrpc', 'httpd', 'php-xml', 'php-soap', 'php-mcrypt', 'php-pecl-apc',
-			'php-gd', 'GeoIP', 'glibc', 'mod_geoip']
+			'php-pecl-mailparse', 'php-pdo', 'php-odbc', 'php-mysql', 'php-xmlrpc',
+			'httpd', 'php-xml', 'php-soap', 'php-mcrypt', 'php-pecl-apc', 'php-gd',
+			'GeoIP', 'glibc', 'mod_geoip']
 			$apache_conf_file = "redhat-httpd.conf.erb"
 			$php_conf_file = "redhat-php.ini.erb"
 			$init_script_name = "httpd"
@@ -84,5 +84,21 @@ class apache2 ($base_chroot_dir = '/webserver',
 	service {
 		$init_script_name :
 			ensure => running,
+	}
+	file {
+		'/webserver/etc/httpd/conf/httpd.conf' :
+			content => template("${module_name}/$apache_conf_file"),
+			owner => root,
+			group => root,
+			require => Exec['sh /var/lib/puppet/cache/make_chroot_webserver.sh'],
+			notify => Service[$init_script_name],
+	}
+	file {
+		'/webserver/etc/php.ini' :
+			content => template("${module_name}/$php_conf_file"),
+			owner => root,
+			group => root,
+			require => Exec['sh /var/lib/puppet/cache/make_chroot_webserver.sh'],
+			notify => Service[$init_script_name],
 	}
 } 
