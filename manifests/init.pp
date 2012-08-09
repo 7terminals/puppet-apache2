@@ -18,7 +18,7 @@ class apache2 ($base_chroot_dir = '/webserver',
 		}
 		centos, redhat, oel, linux, fedora : {
 			$webserver_packages = ['php-common', 'php-imap', 'php-mbstring',
-			'php-pecl-mailparse', 'php-pdo', 'unixODBC-libs', 'php-odbc', 'php-mysql',
+			'php-pecl-mailparse', 'php-pdo', 'php-odbc', 'php-mysql',
 			'php-xmlrpc', 'httpd', 'php-xml', 'php-soap', 'php-mcrypt', 'php-pecl-apc',
 			'php-gd', 'GeoIP', 'glibc', 'mod_geoip']
 			$apache_conf_file = "redhat-httpd.conf.erb"
