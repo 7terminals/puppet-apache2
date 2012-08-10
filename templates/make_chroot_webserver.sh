@@ -145,3 +145,9 @@ if ! [ -d $CHROOT_DIR/home ]
 then
 	mkdir $CHROOT_DIR/home
 fi
+
+# Create dir for pid if it doesnt exist
+if ! [ -d $CHROOT_DIR/var/run/httpd  ]
+then
+	mkdir -p $CHROOT_DIR/var/run/httpd
+fi
