@@ -11,8 +11,8 @@ DocumentRoot /home/<%= servername %>/www/<%= servername %>
 Order Deny,Allow
 Allow from all
 
-php_admin_value session.save_path "/vhosts/juman.co.in/www/tmp"
-php_admin_value open_base_dir "/vhosts/juman.co.in/www"
+php_admin_value session.save_path "/home/<%= servername %>/www/tmp"
+php_admin_value open_base_dir "/home/<%= servername %>/www"
 
 AllowOverride ALL
 
