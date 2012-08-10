@@ -11,15 +11,15 @@
     "Modulefile": "810be7e66a3b8d7e4d5b891baf9fa189",
     "README": "311704eb9da7329602a4570d0654cf11",
     "README.md": "c792e3db25a16b6f82a6cc17429290bb",
-    "manifests\\init.pp": "f2c3e4d660d1f8115c852994ba26d801",
+    "manifests\\init.pp": "df0474c24c263cd1f893750a571bc49a",
     "manifests\\virtualhost.pp": "47b2e1cebdb00b08270e4a246c1580d9",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "templates\\make_chroot_webserver.sh": "e059d9f95eef5126cf7f31e8d328f033",
-    "templates\\redhat-httpd.conf.erb": "4bf24c5a4b21119c516944c3cf194124",
+    "templates\\redhat-httpd.conf.erb": "bf6a2a234af826329f884a966fbacecf",
     "templates\\redhat-httpd.erb": "3ee63193c575679b24eae9bed8a8fb7b",
     "templates\\redhat-php.ini.erb": "09cf92af321360fc587be944379e227e",
-    "templates\\virtualhost.conf.erb": "5e0bda2cb60cb82afc291b36d9f21869",
+    "templates\\virtualhost.conf.erb": "08aa3d6abf14af1386193388f067901b",
     "tests\\init.pp": "2b7217da63de1ae511b40c38586da10a"
   },
   "dependencies": []
