@@ -1,4 +1,4 @@
-define apache2::virtualhost ($servername = $servername,
+define apache2::virtualhost ($servername = $name,
 	$serveraliase,
 	$virtualhost_config_path = "${apache2::base_chroot_dir}/etc/httpd/conf.d",
 	$php_admin_value = undef,
@@ -44,15 +44,15 @@ define apache2::virtualhost ($servername = $servername,
 	}
 	file {
 		"${apache2::base_chroot_dir}/home/${servername}/www" :
-			require => File["${apache2::base_chroot_dir}/${servername}"],
+			require => File["${apache2::base_chroot_dir}/home/${servername}"],
 	}
 	file {
 		"${apache2::base_chroot_dir}/home/${servername}/logs" :
-			require => File["${apache2::base_chroot_dir}/${servername}"],
+			require => File["${apache2::base_chroot_dir}/home/${servername}"],
 	}
 	file {
 		"${apache2::base_chroot_dir}/home/${servername}/tmp" :
-			require => File["${apache2::base_chroot_dir}/${servername}"],
-			mode => ' 0600 ',
+			require => File["${apache2::base_chroot_dir}/home/${servername}"],
+			mode => '600',
 	}
 }
