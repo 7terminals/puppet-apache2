@@ -12,7 +12,11 @@ DocumentRoot /home/<%= servername %>/www/
 Order Deny,Allow
 Allow from all
 
+# Basic php security restrictions 
+
+# PHP scripts can only open files from /home/<%= servername %>/www
 php_admin_value session.save_path "/home/<%= servername %>/www/tmp"
+# TMP dir for sessions is unique to each virtual host
 php_admin_value open_base_dir "/home/<%= servername %>/www"
 
 AllowOverride ALL

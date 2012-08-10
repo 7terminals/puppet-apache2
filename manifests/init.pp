@@ -12,7 +12,8 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class apache2 ($base_chroot_dir = '/webserver',
-	$port = 80) {
+	$port = 80,
+	$serveradmin = 'admin@example.com') {
 	case $::operatingsystem {
 		debian, ubuntu : {
 		}

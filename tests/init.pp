@@ -1,4 +1,8 @@
-include apache2 apache2::virtualhost {
+class {
+	"apache2" :
+		serveradmin => "hello@example.com",
+}
+apache2::virtualhost {
 	"example.com" :
 		serveraliase => "www.example.com",
 		php_admin_value => undef,
