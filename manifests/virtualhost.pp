@@ -8,14 +8,14 @@ define apache2::virtualhost ($servername = $servername,
 		ensure => 'directory',
 		owner => '$servername',
 		group => '$servername',
-		mode => '0644',
+		mode => '644',
 		require => Service["$apache2::init_script"],
 	}
 	group {
 		$servername :
 			name => $servername,
 			ensure => present,
-			gid => $servername,
+			gid => $domain_id,
 	}
 	user {
 		$servername :
@@ -23,7 +23,6 @@ define apache2::virtualhost ($servername = $servername,
 			ensure => present,
 			comment => $servername,
 			gid => $domain_id,
-			groups => $domain_id,
 			home => "${apache2::base_chroot_dir}/home/${servername}",
 			managehome => true,
 			password => $password,
