@@ -1,5 +1,6 @@
 define apache2::virtualhost ($servername = $name,
 	$serveraliase,
+	$serveradmin = "${apache2::serveradmin}",
 	$virtualhost_config_path = "${apache2::base_chroot_dir}/etc/httpd/conf.d",
 	$php_admin_value = undef,
 	$domain_id = undef,
