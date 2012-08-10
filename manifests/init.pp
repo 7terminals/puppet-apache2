@@ -18,7 +18,7 @@ class apache2 ($base_chroot_dir = '/webserver',
 		debian, ubuntu : {
 		}
 		centos, redhat, oel, linux, fedora : {
-			$webserver_packages = ['php-common', 'php-imap', 'php-mbstring',
+			$webserver_packages = ['php-common', 'php', 'php-imap', 'php-mbstring',
 			'php-pecl-mailparse', 'php-pdo', 'php-odbc', 'php-mysql', 'php-xmlrpc',
 			'httpd', 'php-xml', 'php-soap', 'php-mcrypt', 'php-pecl-apc', 'php-gd',
 			'GeoIP', 'glibc', 'mod_geoip']
