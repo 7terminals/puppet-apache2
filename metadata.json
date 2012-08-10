@@ -12,7 +12,7 @@
     "README": "311704eb9da7329602a4570d0654cf11",
     "README.md": "c792e3db25a16b6f82a6cc17429290bb",
     "manifests\\init.pp": "3cd53d7bdddf9508d842474f23d19cfe",
-    "manifests\\virtualhost.pp": "2f24d824d5f982d4084968b7bf9fa82b",
+    "manifests\\virtualhost.pp": "9ffa557959aa078a1abcde541fe013dd",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "templates\\make_chroot_webserver.sh": "e059d9f95eef5126cf7f31e8d328f033",

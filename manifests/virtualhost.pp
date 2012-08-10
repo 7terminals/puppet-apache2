@@ -5,10 +5,10 @@ define apache2::virtualhost ($servername = $servername,
 	$domain_id = undef,
 	$password = undef) {
 	File {
-		ensure => ' directory ',
-		owner => ' $servername ',
-		group => ' $servername ',
-		mode => ' 0644 ',
+		ensure => 'directory',
+		owner => '$servername',
+		group => '$servername',
+		mode => '0644',
 		require => Service["$apache2::init_script"],
 	}
 	group {
