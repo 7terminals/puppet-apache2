@@ -6,8 +6,8 @@ define apache2::virtualhost ($servername = $name,
 	$password = undef) {
 	File {
 		ensure => 'directory',
-		owner => ${servername},
-		group => ${servername},
+		owner => "${servername}",
+		group => "${servername}",
 		mode => '644',
 		require => Service["$apache2::init_script"],
 	}

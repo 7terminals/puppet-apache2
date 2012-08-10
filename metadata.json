@@ -12,14 +12,14 @@
     "README": "311704eb9da7329602a4570d0654cf11",
     "README.md": "c792e3db25a16b6f82a6cc17429290bb",
     "manifests\\init.pp": "3cd53d7bdddf9508d842474f23d19cfe",
-    "manifests\\virtualhost.pp": "e950e6cd4936e6caceda2deb91ddc06a",
+    "manifests\\virtualhost.pp": "02a9a079cddad2b2ecfcf439709f33c9",
     "spec\\spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec\\spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "templates\\make_chroot_webserver.sh": "e059d9f95eef5126cf7f31e8d328f033",
     "templates\\redhat-httpd.conf.erb": "1e52d07d4b3252e0a41486cc49e310ce",
     "templates\\redhat-httpd.erb": "3ee63193c575679b24eae9bed8a8fb7b",
     "templates\\redhat-php.ini.erb": "09cf92af321360fc587be944379e227e",
-    "templates\\virtualhost.conf.erb": "19f61b59ebe1036ac8a1697890d6202d",
+    "templates\\virtualhost.conf.erb": "18593905ebcfb6a32950e2667755bfd6",
     "tests\\init.pp": "d36b39b6fbbba824b62ee070f4914dd7"
   },
   "dependencies": []
