@@ -1,6 +1,6 @@
 define apache2::virtualhost ($servername = $servername,
 	$subdomains,
-	$virtualhost_config_path = "${apache::base_chroot_dir}/etc/httpd/conf.d",
+	$virtualhost_config_path = "${apache2::base_chroot_dir}/etc/httpd/conf.d",
 	$php_admin_value = undef,
 	$domain_id = undef,
 	$password = undef) {
@@ -24,8 +24,8 @@ define apache2::virtualhost ($servername = $servername,
 			comment => $servername,
 			gid => $domain_id,
 			groups => $domain_id,
-			home => "${apache::base_chroot_dir}/home/${servername}",
-			managehome => $managehome,
+			home => "${apache2::base_chroot_dir}/home/${servername}",
+			managehome => true,
 			password => $password,
 			shell => '/bin/bash',
 			uid => $domain_id,
@@ -40,20 +40,20 @@ define apache2::virtualhost ($servername = $servername,
 			notify => Service[' httpd '],
 	}
 	file {
-		"${apache::base_chroot_dir}/home/${servername}" :
+		"${apache2::base_chroot_dir}/home/${servername}" :
 			require => File["${virtualhost_config_path}/${servername}.conf"],
 	}
 	file {
-		"${apache::base_chroot_dir}/home/${servername}/www" :
-			require => File["${apache::base_chroot_dir}/${servername}"],
+		"${apache2::base_chroot_dir}/home/${servername}/www" :
+			require => File["${apache2::base_chroot_dir}/${servername}"],
 	}
 	file {
-		"${apache::base_chroot_dir}/home/${servername}/logs" :
-			require => File["${apache::base_chroot_dir}/${servername}"],
+		"${apache2::base_chroot_dir}/home/${servername}/logs" :
+			require => File["${apache2::base_chroot_dir}/${servername}"],
 	}
 	file {
-		"${apache::base_chroot_dir}/home/${servername}/tmp" :
-			require => File["${apache::base_chroot_dir}/${servername}"],
+		"${apache2::base_chroot_dir}/home/${servername}/tmp" :
+			require => File["${apache2::base_chroot_dir}/${servername}"],
 			mode => ' 0600 ',
 	}
 }
