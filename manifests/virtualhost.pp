@@ -6,8 +6,8 @@ define apache2::virtualhost ($servername = $name,
 	$password = undef) {
 	File {
 		ensure => 'directory',
-		owner => '$servername',
-		group => '$servername',
+		owner => ${servername},
+		group => ${servername},
 		mode => '644',
 		require => Service["$apache2::init_script"],
 	}
@@ -35,8 +35,8 @@ define apache2::virtualhost ($servername = $name,
 			ensure => file,
 			content => template("${module_name}/virtualhost.conf.erb"),
 			require =>
-			Exec['sh /var/lib/puppet/cache/make_chroot_webserver.sh '],
-			notify => Service[' httpd '],
+			Exec['sh /var/lib/puppet/cache/make_chroot_webserver.sh'],
+			notify => Service['httpd'],
 	}
 	file {
 		"${apache2::base_chroot_dir}/home/${servername}" :
